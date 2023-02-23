@@ -1,0 +1,19 @@
+.map-wrapper {
+  display: flex;
+  height: 100%;
+
+  .map-holder {
+    max-width: calc(100% - 300px);
+    width: 100%;
+    position: relative;
+  }
+
+  .property-container {
+    max-width: 300px;
+    width: 100%;
+    padding: 12px;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}

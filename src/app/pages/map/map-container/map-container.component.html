@@ -1,0 +1,12 @@
+<div class="map-wrapper">
+  <div class="map-holder">
+    <app-leaflet-map
+      [coordinate]="coords"
+      (locationList)="loadList($event)"
+    ></app-leaflet-map>
+    <app-search-component (location)="loadCoord($event)"></app-search-component>
+  </div>
+  <div class="property-container">
+    <app-property-card [propertyList]="propertyList"></app-property-card>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="property-card" *ngFor="let item of propertyList">
+  <div class="property-img">
+    <img [src]="item.primary_photo" alt="" />
+  </div>
+  <div class="property-details">
+    <span class="property-label">{{ item.branding[0].type }}</span>
+    <h3>{{ item.branding[0].name }}</h3>
+    <p class="date">{{ item.last_update_date | date : "dd MMM yyyy" }}</p>
+    <p class="pricing">
+      {{ item.list_price | currency : "USD" : "symbol" : "4.2-2" }}
+    </p>
+    <button class="view-property" (click)="viewDetails(item.property_id)">
+      View Property
+    </button>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+.property-container {
+  padding: 24px;
+
+  .property-filter {
+    padding: 24px 24px 36px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    // flex-wrap: wrap;
+    gap: 24px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    margin: 0 -24px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+  }
+}

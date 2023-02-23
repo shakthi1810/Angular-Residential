@@ -1,0 +1,735 @@
+[
+  {
+    "agent": [
+      {
+        "office_name": null
+      }
+    ],
+    "branding": [
+      {
+        "name": "Kw Peninsula Estates",
+        "photo": null,
+        "type": "Office"
+      }
+    ],
+    "last_update_date": "2023-02-03T13:12:42Z",
+    "list_date": "2023-02-01T18:43:52Z",
+    "list_price": 1390000,
+    "listing_id": "2951994078",
+    "location": {
+      "address": {
+        "city": "San Francisco",
+        "coordinate": {
+          "lat": 37.717001,
+          "lon": -122.464153
+        },
+        "line": "546 Head St",
+        "postal_code": "94132",
+        "state": "California",
+        "state_code": "CA"
+      },
+      "county": {
+        "fips_code": "06075",
+        "name": "San Francisco"
+      },
+      "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=546%20Head%20St%2C%20San%20Francisco%2C%20CA%2094132&size=640x480&source=outdoor&signature=mppATGJnuWQPMFiUHmJWiXsrjDg="
+    },
+    "open_house_description": {
+      "description": null,
+      "dst": true,
+      "end_date": "2023-02-04T16:00:00",
+      "methods": ["in_person"],
+      "start_date": "2023-02-04T13:00:00",
+      "time_zone": "PST"
+    },
+    "other_listings": {
+      "rdc": [
+        {
+          "listing_id": "2951994078",
+          "listing_key": null,
+          "primary": true,
+          "status": "for_sale"
+        },
+        {
+          "listing_id": "2944241647",
+          "listing_key": null,
+          "primary": null,
+          "status": "sold"
+        }
+      ]
+    },
+    "permalink": "https://www.realtor.com/realestateandhomes-detail/546-Head-St_San-Francisco_CA_94132_M23435-77554",
+    "photos": [
+      {
+        "href": "https://ap.rdcpix.com/f8d005e60873be165aab5b9874c6859dl-m633176956s.jpg"
+      },
+      {
+        "href": "https://ap.rdcpix.com/f8d005e60873be165aab5b9874c6859dl-m810818290s.jpg"
+      }
+    ],
+    "price_reduced_amount": null,
+    "primary_photo": "https://ap.rdcpix.com/f8d005e60873be165aab5b9874c6859dl-m633176956s.jpg",
+    "property_description": {
+      "baths": 2,
+      "baths_1qtr": null,
+      "baths_3qtr": null,
+      "baths_full": 2,
+      "baths_half": null,
+      "beds": 3,
+      "garage": 1,
+      "lot_sqft": 2495,
+      "name": null,
+      "sold_date": "2022-07-01",
+      "sold_price": 958000,
+      "sqft": 1694,
+      "stories": null,
+      "sub_type": null,
+      "type": "single_family",
+      "year_built": 1938
+    },
+    "property_id": "2343577554",
+    "source": "SJCA",
+    "status": "for_sale",
+    "tax_record": "00A4DC5E732F146154DCA4AF6328B539",
+    "type": "mls",
+    "virtual_tour_link": "No Virtual Tour Available"
+  },
+  {
+    "agent": [
+      {
+        "office_name": null
+      }
+    ],
+    "branding": [
+      {
+        "name": "Park North Real Estate",
+        "photo": null,
+        "type": "Office"
+      }
+    ],
+    "last_update_date": "2023-01-26T19:40:42Z",
+    "list_date": "2023-01-10T23:55:29Z",
+    "list_price": 695000,
+    "listing_id": "2951307587",
+    "location": {
+      "address": {
+        "city": "San Francisco",
+        "coordinate": {
+          "lat": 37.710417,
+          "lon": -122.467703
+        },
+        "line": "8200 Oceanview Ter Apt 324",
+        "postal_code": "94132",
+        "state": "California",
+        "state_code": "CA"
+      },
+      "county": {
+        "fips_code": "06075",
+        "name": "San Francisco"
+      },
+      "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=8200%20Oceanview%20Ter%20Apt%20324%2C%20San%20Francisco%2C%20CA%2094132&size=640x480&source=outdoor&signature=jRyHhqbIo_mZOzRPKoKFVcTZVuc="
+    },
+    "open_house_description": "No Open House Available",
+    "other_listings": {
+      "rdc": [
+        {
+          "listing_id": "2951307587",
+          "listing_key": null,
+          "primary": true,
+          "status": "for_sale"
+        }
+      ]
+    },
+    "permalink": "https://www.realtor.com/realestateandhomes-detail/8200-Oceanview-Ter-Apt-324_San-Francisco_CA_94132_M20575-50928",
+    "photos": [
+      {
+        "href": "https://ap.rdcpix.com/18bcb1260de500ee26333c5698946991l-m479660371s.jpg"
+      },
+      {
+        "href": "https://ap.rdcpix.com/18bcb1260de500ee26333c5698946991l-m2908548091s.jpg"
+      }
+    ],
+    "price_reduced_amount": null,
+    "primary_photo": "https://ap.rdcpix.com/18bcb1260de500ee26333c5698946991l-m479660371s.jpg",
+    "property_description": {
+      "baths": 2,
+      "baths_1qtr": null,
+      "baths_3qtr": null,
+      "baths_full": 2,
+      "baths_half": null,
+      "beds": 2,
+      "garage": null,
+      "lot_sqft": 964,
+      "name": null,
+      "sold_date": "2005-01-19",
+      "sold_price": 512000,
+      "sqft": null,
+      "stories": 1,
+      "sub_type": "condo",
+      "type": "condos",
+      "year_built": 2002
+    },
+    "property_id": "2057550928",
+    "source": "SFCA",
+    "status": "for_sale",
+    "tax_record": "91790E7BB4B06DA39AA02A25D11D0FDD",
+    "type": "mls",
+    "virtual_tour_link": "No Virtual Tour Available"
+  },
+  {
+    "agent": [
+      {
+        "office_name": null
+      }
+    ],
+    "branding": [
+      {
+        "name": "Excel Realty",
+        "photo": null,
+        "type": "Office"
+      }
+    ],
+    "last_update_date": "2023-02-02T15:24:47Z",
+    "list_date": "2022-10-21T07:07:29Z",
+    "list_price": 450000,
+    "listing_id": "2949115940",
+    "location": {
+      "address": {
+        "city": "San Francisco",
+        "coordinate": {
+          "lat": 37.710417,
+          "lon": -122.467703
+        },
+        "line": "8100 Oceanview Ter Apt 309",
+        "postal_code": "94132",
+        "state": "California",
+        "state_code": "CA"
+      },
+      "county": {
+        "fips_code": "06075",
+        "name": "San Francisco"
+      },
+      "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=8100%20Oceanview%20Ter%20Apt%20309%2C%20San%20Francisco%2C%20CA%2094132&size=640x480&source=outdoor&signature=8i0ifDIQLJBZHGRWWI8C-z0RSDU="
+    },
+    "open_house_description": "No Open House Available",
+    "other_listings": {
+      "rdc": [
+        {
+          "listing_id": "2949115940",
+          "listing_key": null,
+          "primary": true,
+          "status": "for_sale"
+        },
+        {
+          "listing_id": "2941219539",
+          "listing_key": null,
+          "primary": null,
+          "status": "off_market"
+        },
+        {
+          "listing_id": "2942337267",
+          "listing_key": null,
+          "primary": null,
+          "status": "off_market"
+        }
+      ]
+    },
+    "permalink": "https://www.realtor.com/realestateandhomes-detail/8100-Oceanview-Ter-Apt-309_San-Francisco_CA_94132_M18431-95820",
+    "photos": [
+      {
+        "href": "https://ap.rdcpix.com/794daa2002266b895170db2fb6a5e7d9l-m2322904582s.jpg"
+      },
+      {
+        "href": "https://ap.rdcpix.com/794daa2002266b895170db2fb6a5e7d9l-m703794497s.jpg"
+      }
+    ],
+    "price_reduced_amount": 85000,
+    "primary_photo": "https://ap.rdcpix.com/794daa2002266b895170db2fb6a5e7d9l-m2322904582s.jpg",
+    "property_description": {
+      "baths": 1,
+      "baths_1qtr": null,
+      "baths_3qtr": null,
+      "baths_full": 1,
+      "baths_half": null,
+      "beds": 1,
+      "garage": null,
+      "lot_sqft": null,
+      "name": null,
+      "sold_date": "2007-08-03",
+      "sold_price": 380000,
+      "sqft": 510,
+      "stories": null,
+      "sub_type": "condo",
+      "type": "condos",
+      "year_built": null
+    },
+    "property_id": "1843195820",
+    "source": "SFCA",
+    "status": "for_sale",
+    "tax_record": "B2D4E9303966196626776EC705EA66EC",
+    "type": "mls",
+    "virtual_tour_link": "No Virtual Tour Available"
+  },
+  {
+    "agent": [
+      {
+        "office_name": "CENTURY21 REAL ESTATE ALLIANCE"
+      },
+      {
+        "office_name": null
+      }
+    ],
+    "branding": [
+      {
+        "name": "CENTURY 21 Real Estate Alliance",
+        "photo": null,
+        "type": "Office"
+      }
+    ],
+    "last_update_date": "2022-12-06T01:24:16Z",
+    "list_date": "2022-08-23T23:24:23Z",
+    "list_price": 875000,
+    "listing_id": "2946989531",
+    "location": {
+      "address": {
+        "city": "San Francisco",
+        "coordinate": {
+          "lat": 37.71979,
+          "lon": -122.462898
+        },
+        "line": "9 Garfield St",
+        "postal_code": "94132",
+        "state": "California",
+        "state_code": "CA"
+      },
+      "county": {
+        "fips_code": "06075",
+        "name": "San Francisco"
+      },
+      "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=9%20Garfield%20St%2C%20San%20Francisco%2C%20CA%2094132&size=640x480&source=outdoor&signature=NniMw06UKhWMjlwyIN-dwOajrxo="
+    },
+    "open_house_description": "No Open House Available",
+    "other_listings": {
+      "rdc": [
+        {
+          "listing_id": "2946989531",
+          "listing_key": null,
+          "primary": true,
+          "status": "for_sale"
+        }
+      ]
+    },
+    "permalink": "https://www.realtor.com/realestateandhomes-detail/9-Garfield-St_San-Francisco_CA_94132_M23343-72866",
+    "photos": [
+      {
+        "href": "https://ap.rdcpix.com/690f73cb78c5a22ccb272def0e3435fel-b1134851845s.jpg"
+      },
+      {
+        "href": "https://ap.rdcpix.com/690f73cb78c5a22ccb272def0e3435fel-b145756411s.jpg"
+      }
+    ],
+    "price_reduced_amount": null,
+    "primary_photo": "https://ap.rdcpix.com/690f73cb78c5a22ccb272def0e3435fel-b1134851845s.jpg",
+    "property_description": {
+      "baths": 1,
+      "baths_1qtr": null,
+      "baths_3qtr": null,
+      "baths_full": 1,
+      "baths_half": null,
+      "beds": 0,
+      "garage": 2,
+      "lot_sqft": 2539,
+      "name": null,
+      "sold_date": "2017-08-17",
+      "sold_price": 45373,
+      "sqft": 1094,
+      "stories": null,
+      "sub_type": null,
+      "type": "single_family",
+      "year_built": 1947
+    },
+    "property_id": "2334372866",
+    "source": "BDCA",
+    "status": "for_sale",
+    "tax_record": "6A966F0C987E7C5A1DB0D29A6B22116A",
+    "type": "mls",
+    "virtual_tour_link": "No Virtual Tour Available"
+  },
+  {
+    "agent": [
+      {
+        "office_name": null
+      }
+    ],
+    "branding": [
+      {
+        "name": "Jenny He Realty Associates",
+        "photo": null,
+        "type": "Office"
+      }
+    ],
+    "last_update_date": "2023-01-16T12:40:28Z",
+    "list_date": "2022-11-11T23:19:30Z",
+    "list_price": 579000,
+    "listing_id": "2949926158",
+    "location": {
+      "address": {
+        "city": "San Francisco",
+        "coordinate": {
+          "lat": 37.710417,
+          "lon": -122.467703
+        },
+        "line": "8400 Oceanview Ter Apt 310",
+        "postal_code": "94132",
+        "state": "California",
+        "state_code": "CA"
+      },
+      "county": {
+        "fips_code": "06075",
+        "name": "San Francisco"
+      },
+      "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=8400%20Oceanview%20Ter%20Apt%20310%2C%20San%20Francisco%2C%20CA%2094132&size=640x480&source=outdoor&signature=5qv-IxPZYKlwUpnxW5OASiVp68k="
+    },
+    "open_house_description": {
+      "description": null,
+      "dst": true,
+      "end_date": "2023-02-05T16:00:00",
+      "methods": ["in_person"],
+      "start_date": "2023-02-05T14:00:00",
+      "time_zone": "PST"
+    },
+    "other_listings": {
+      "rdc": [
+        {
+          "listing_id": "2949926158",
+          "listing_key": null,
+          "primary": true,
+          "status": "for_sale"
+        },
+        {
+          "listing_id": "522379912",
+          "listing_key": null,
+          "primary": null,
+          "status": "off_market"
+        }
+      ]
+    },
+    "permalink": "https://www.realtor.com/realestateandhomes-detail/8400-Oceanview-Ter-Apt-310_San-Francisco_CA_94132_M10297-38563",
+    "photos": [
+      {
+        "href": "https://ap.rdcpix.com/3468249605c76dd70a2bb70ba928d4f3l-m1419192756s.jpg"
+      },
+      {
+        "href": "https://ap.rdcpix.com/3468249605c76dd70a2bb70ba928d4f3l-m2254258323s.jpg"
+      }
+    ],
+    "price_reduced_amount": 20000,
+    "primary_photo": "https://ap.rdcpix.com/3468249605c76dd70a2bb70ba928d4f3l-m1419192756s.jpg",
+    "property_description": {
+      "baths": 1,
+      "baths_1qtr": null,
+      "baths_3qtr": null,
+      "baths_full": 1,
+      "baths_half": null,
+      "beds": 1,
+      "garage": null,
+      "lot_sqft": 325628,
+      "name": null,
+      "sold_date": "2011-04-29",
+      "sold_price": 225000,
+      "sqft": 669,
+      "stories": 1,
+      "sub_type": "condo",
+      "type": "condos",
+      "year_built": 2002
+    },
+    "property_id": "1029738563",
+    "source": "SFCA",
+    "status": "for_sale",
+    "tax_record": "097E5EE65C42E7BBA9BDE4D12D648028",
+    "type": "mls",
+    "virtual_tour_link": "No Virtual Tour Available"
+  },
+  {
+    "agent": [
+      {
+        "office_name": null
+      }
+    ],
+    "branding": [
+      {
+        "name": "Park North Real Estate",
+        "photo": null,
+        "type": "Office"
+      }
+    ],
+    "last_update_date": "2023-01-26T21:44:55Z",
+    "list_date": "2023-01-12T19:59:39Z",
+    "list_price": 1195000,
+    "listing_id": "2951384958",
+    "location": {
+      "address": {
+        "city": "San Francisco",
+        "coordinate": {
+          "lat": 37.718516,
+          "lon": -122.462924
+        },
+        "line": "531 Orizaba Ave",
+        "postal_code": "94132",
+        "state": "California",
+        "state_code": "CA"
+      },
+      "county": {
+        "fips_code": "06075",
+        "name": "San Francisco"
+      },
+      "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=531%20Orizaba%20Ave%2C%20San%20Francisco%2C%20CA%2094132&size=640x480&source=outdoor&signature=aiknpVw2v-F19VKHeh-1rai-wso="
+    },
+    "open_house_description": "No Open House Available",
+    "other_listings": {
+      "rdc": [
+        {
+          "listing_id": "2951384958",
+          "listing_key": null,
+          "primary": true,
+          "status": "for_sale"
+        },
+        {
+          "listing_id": "2945848430",
+          "listing_key": null,
+          "primary": null,
+          "status": "off_market"
+        },
+        {
+          "listing_id": "2926995440",
+          "listing_key": null,
+          "primary": null,
+          "status": "off_market"
+        },
+        {
+          "listing_id": "2924867326",
+          "listing_key": null,
+          "primary": null,
+          "status": "off_market"
+        },
+        {
+          "listing_id": "2923024167",
+          "listing_key": null,
+          "primary": null,
+          "status": "off_market"
+        },
+        {
+          "listing_id": "2922926930",
+          "listing_key": null,
+          "primary": null,
+          "status": "off_market"
+        }
+      ]
+    },
+    "permalink": "https://www.realtor.com/realestateandhomes-detail/531-Orizaba-Ave_San-Francisco_CA_94132_M19534-40402",
+    "photos": [
+      {
+        "href": "https://ap.rdcpix.com/97789d35ee7426a3f9ecbde7d1847ec2l-m560485537s.jpg"
+      },
+      {
+        "href": "https://ap.rdcpix.com/97789d35ee7426a3f9ecbde7d1847ec2l-m408575173s.jpg"
+      }
+    ],
+    "price_reduced_amount": null,
+    "primary_photo": "https://ap.rdcpix.com/97789d35ee7426a3f9ecbde7d1847ec2l-m560485537s.jpg",
+    "property_description": {
+      "baths": 3,
+      "baths_1qtr": null,
+      "baths_3qtr": null,
+      "baths_full": 3,
+      "baths_half": null,
+      "beds": 3,
+      "garage": null,
+      "lot_sqft": 2495,
+      "name": null,
+      "sold_date": "2018-03-07",
+      "sold_price": 1350000,
+      "sqft": 1828,
+      "stories": null,
+      "sub_type": null,
+      "type": "single_family",
+      "year_built": 1962
+    },
+    "property_id": "1953440402",
+    "source": "SFCA",
+    "status": "for_sale",
+    "tax_record": "F77ECC29A77ED677ACD335A17D445D94",
+    "type": "mls",
+    "virtual_tour_link": "No Virtual Tour Available"
+  },
+  {
+    "agent": [
+      {
+        "office_name": null
+      }
+    ],
+    "branding": [
+      {
+        "name": "RedFin",
+        "photo": null,
+        "type": "Office"
+      }
+    ],
+    "last_update_date": "2023-02-01T08:37:52Z",
+    "list_date": "2022-11-07T17:49:26Z",
+    "list_price": 1399000,
+    "listing_id": "2949637299",
+    "location": {
+      "address": {
+        "city": "San Francisco",
+        "coordinate": {
+          "lat": 37.717719,
+          "lon": -122.469689
+        },
+        "line": "186 Byxbee St",
+        "postal_code": "94132",
+        "state": "California",
+        "state_code": "CA"
+      },
+      "county": {
+        "fips_code": "06075",
+        "name": "San Francisco"
+      },
+      "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=186%20Byxbee%20St%2C%20San%20Francisco%2C%20CA%2094132&size=640x480&source=outdoor&signature=Ysy6RciWzIxPhUfLXwt1kJp58co="
+    },
+    "open_house_description": "No Open House Available",
+    "other_listings": {
+      "rdc": [
+        {
+          "listing_id": "2949637299",
+          "listing_key": null,
+          "primary": true,
+          "status": "for_sale"
+        }
+      ]
+    },
+    "permalink": "https://www.realtor.com/realestateandhomes-detail/186-Byxbee-St_San-Francisco_CA_94132_M23656-76258",
+    "photos": [
+      {
+        "href": "https://ap.rdcpix.com/6093c11ce9ff149ec06c5f82155b1c82l-m1028874716s.jpg"
+      },
+      {
+        "href": "https://ap.rdcpix.com/6093c11ce9ff149ec06c5f82155b1c82l-m2759747655s.jpg"
+      }
+    ],
+    "price_reduced_amount": null,
+    "primary_photo": "https://ap.rdcpix.com/6093c11ce9ff149ec06c5f82155b1c82l-m1028874716s.jpg",
+    "property_description": {
+      "baths": 2,
+      "baths_1qtr": null,
+      "baths_3qtr": null,
+      "baths_full": 2,
+      "baths_half": null,
+      "beds": 3,
+      "garage": null,
+      "lot_sqft": 1873,
+      "name": null,
+      "sold_date": "2000-06-26",
+      "sold_price": 435000,
+      "sqft": 1899,
+      "stories": null,
+      "sub_type": null,
+      "type": "single_family",
+      "year_built": 1959
+    },
+    "property_id": "2365676258",
+    "source": "SFCA",
+    "status": "for_sale",
+    "tax_record": "D70E1CD1D552F3F2C2D958C50640D4F4",
+    "type": "mls",
+    "virtual_tour_link": "No Virtual Tour Available"
+  },
+  {
+    "agent": [
+      {
+        "office_name": null
+      }
+    ],
+    "branding": [
+      {
+        "name": "Gold Coast Brokerage",
+        "photo": null,
+        "type": "Office"
+      }
+    ],
+    "last_update_date": "2023-01-13T07:21:51Z",
+    "list_date": "2022-11-08T14:55:24Z",
+    "list_price": 1800000,
+    "listing_id": "2949664364",
+    "location": {
+      "address": {
+        "city": "San Francisco",
+        "coordinate": {
+          "lat": 37.71342,
+          "lon": -122.464115
+        },
+        "line": "350 Head St",
+        "postal_code": "94132",
+        "state": "California",
+        "state_code": "CA"
+      },
+      "county": {
+        "fips_code": "06075",
+        "name": "San Francisco"
+      },
+      "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&location=350%20Head%20St%2C%20San%20Francisco%2C%20CA%2094132&size=640x480&source=outdoor&signature=K_07WMYBJ5ivLg8XrZRobTrxcSU="
+    },
+    "open_house_description": "No Open House Available",
+    "other_listings": {
+      "rdc": [
+        {
+          "listing_id": "2949664364",
+          "listing_key": null,
+          "primary": true,
+          "status": "for_sale"
+        },
+        {
+          "listing_id": "614066120",
+          "listing_key": null,
+          "primary": null,
+          "status": "sold"
+        }
+      ]
+    },
+    "permalink": "https://www.realtor.com/realestateandhomes-detail/350-Head-St_San-Francisco_CA_94132_M10110-10609",
+    "photos": [
+      {
+        "href": "https://ap.rdcpix.com/554113a30b56e8228025dd24e8831c18l-m171035918s.jpg"
+      },
+      {
+        "href": "https://ap.rdcpix.com/554113a30b56e8228025dd24e8831c18l-m3890933476s.jpg"
+      }
+    ],
+    "price_reduced_amount": null,
+    "primary_photo": "https://ap.rdcpix.com/554113a30b56e8228025dd24e8831c18l-m171035918s.jpg",
+    "property_description": {
+      "baths": 0,
+      "baths_1qtr": null,
+      "baths_3qtr": null,
+      "baths_full": null,
+      "baths_half": null,
+      "beds": null,
+      "garage": null,
+      "lot_sqft": 5001,
+      "name": null,
+      "sold_date": "2020-02-12",
+      "sold_price": 1100000,
+      "sqft": null,
+      "stories": null,
+      "sub_type": null,
+      "type": "land",
+      "year_built": null
+    },
+    "property_id": "1011010609",
+    "source": "SFCA",
+    "status": "for_sale",
+    "tax_record": "CBC5CB20C0481CB7E80211858EA64EA6",
+    "type": "mls",
+    "virtual_tour_link": "No Virtual Tour Available"
+  }
+]

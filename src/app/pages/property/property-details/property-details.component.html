@@ -1,0 +1,123 @@
+<div class="property-main">
+  <div class="property-grid">
+    <div class="property-details">
+      <div class="property-detail-card">
+        <div class="display-flex">
+          <div>
+            <h2>{{ propertyDetailArr.branding[0].name }}</h2>
+            <span class="property-label">{{
+              propertyDetailArr.branding[0].type
+            }}</span>
+          </div>
+          <button>
+            <i class="fa fa-menu"></i>
+          </button>
+        </div>
+      </div>
+      <div class="property-detail-card">
+        <img [src]="propertyDetailArr.photos[0].href" alt="" />
+      </div>
+      <div class="property-detail-card">
+        <h3>Details</h3>
+        <div class="address-grid">
+          <div>
+            <i class="fa fa-menu"></i>
+            <p><b>Beds:</b>{{ propertyDetailArr.property_description.beds }}</p>
+          </div>
+          <div>
+            <i class="fa fa-menu"></i>
+            <p>
+              <b>Baths:</b>{{ propertyDetailArr.property_description.baths }}
+            </p>
+          </div>
+          <div>
+            <i class="fa fa-menu"></i>
+            <p>
+              <b>Garage:</b>{{ propertyDetailArr.property_description.garage }}
+            </p>
+          </div>
+          <div>
+            <i class="fa fa-menu"></i>
+            <p>
+              <b>Square feet:</b
+              >{{ propertyDetailArr.property_description.sqft }}
+            </p>
+          </div>
+          <div>
+            <i class="fa fa-menu"></i>
+            <p>
+              <b>Lots square feet:</b
+              >{{ propertyDetailArr.property_description.lot_sqft }}
+            </p>
+          </div>
+          <div>
+            <i class="fa fa-menu"></i>
+            <p>
+              <b>Sold price:</b
+              >{{
+                propertyDetailArr.property_description.sold_price
+                  | currency : "USD" : "symbol" : "4.2-2"
+              }}
+            </p>
+          </div>
+          <div>
+            <i class="fa fa-menu"></i>
+            <p>
+              <b>Sold Date:</b
+              >{{ propertyDetailArr.property_description.sold_date }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="property-detail-card">
+        <h3>Address</h3>
+        <div class="address-wrapper">
+          <address>
+            <span
+              ><b>Building Name:</b
+              >{{ propertyDetailArr.branding[0].name }},</span
+            >
+            <span
+              ><b>Street:</b
+              >{{ propertyDetailArr.location.address.line }},</span
+            >
+            <span
+              ><b>City:</b>{{ propertyDetailArr.location.address.city }},</span
+            >
+            <span
+              ><b>State:</b>{{ propertyDetailArr.location.address.state }} -
+              {{ propertyDetailArr.location.address.state_code }},</span
+            >
+            <span
+              ><b>Postal code:</b
+              >{{ propertyDetailArr.location.address.postal_code }}.</span
+            >
+            <a
+              class="street-view-btn"
+              [href]="propertyDetailArr.location.street_view_url"
+              >Street View</a
+            >
+          </address>
+          <app-leaflet-map class="map" [coordinate]="coords"></app-leaflet-map>
+        </div>
+      </div>
+    </div>
+    <div class="calculator-asaid">
+      <div class="position-sticky">
+        <app-calculator [calcValue]="calcData"></app-calculator>
+
+        <div class="loadMap-view">
+          <div class="head">Map View</div>
+          <div class="body">
+            <p>
+              Maps can be a useful tool for viewing properties location & filter
+              them by types. this also help us to know distances so that we know
+              how far away one thing is from another.
+            </p>
+            <button>Find In Map</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

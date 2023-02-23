@@ -1,0 +1,33 @@
+import {
+  Component,
+  OnInit,
+  Output,
+  EventEmitter,
+  Input,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
+
+@Component({
+  selector: 'app-filter-box',
+  templateUrl: './filter-box.component.html',
+  styleUrls: ['./filter-box.component.scss'],
+})
+export class FilterBoxComponent implements OnInit, OnChanges {
+  @Output() filterValue: EventEmitter<any> = new EventEmitter();
+  @Input() label: any | undefined;
+
+  labelStr: String | undefined;
+  options: any;
+
+  ngOnInit(): void {}
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.labelStr = this.label.label;
+    this.options = this.label.option;
+  }
+
+  onInput(data: any) {
+    this.filterValue.emit(data.target.value);
+  }
+}

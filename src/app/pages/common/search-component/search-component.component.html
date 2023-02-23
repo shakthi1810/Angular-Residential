@@ -1,0 +1,23 @@
+<div class="searchBar">
+  <input
+    [(ngModel)]="value"
+    type="text"
+    class="form-control"
+    id="valueId"
+    (input)="GenerateData($event)"
+    name="search"
+  />
+
+  <div class="search-result" id="searchResult">
+    <ul *ngIf="filteredArr.length !== 0">
+      <li
+        *ngFor="let list of filteredArr"
+        class="search-list"
+        [attr.data-lat]="list.lat"
+        [attr.data-lng]="list.lng"
+      >
+        {{ list.city }}
+      </li>
+    </ul>
+  </div>
+</div>

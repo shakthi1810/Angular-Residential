@@ -1,0 +1,8 @@
+<div class="filter-box-wrapper">
+  <label for="">{{ labelStr }}</label>
+  <select (input)="onInput($event)" type="text">
+    <option [value]="item.key" *ngFor="let item of options">
+      {{ item.value }}
+    </option>
+  </select>
+</div>

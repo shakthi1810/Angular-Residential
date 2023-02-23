@@ -1,0 +1,26 @@
+<div class="main">
+  <form [formGroup]="loginForm" class="form">
+    <h2>Login Form</h2>
+    <label for="">User Name</label>
+    <input
+      type="text"
+      [ngClass]="user?.invalid && user?.touched ? 'invalid' : ''"
+      formControlName="firstName"
+    />
+    <span class="invalid" *ngIf="user?.invalid && user?.touched"
+      >Please enter a valid user name</span
+    >
+
+    <label for="">Password</label>
+    <input
+      [ngClass]="password?.invalid && password?.touched ? 'invalid' : ''"
+      type="password"
+      formControlName="password"
+    /><br />
+    <span class="invalid" *ngIf="password?.invalid && password?.touched"
+      >Please enter a valid user name</span
+    >
+
+    <button (click)="onSubmit()" type="submit" value="Login">Login</button>
+  </form>
+</div>

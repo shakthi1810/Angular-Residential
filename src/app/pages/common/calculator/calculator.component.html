@@ -1,0 +1,65 @@
+<div class="calculator-card">
+  <div class="calc-header">
+    <h2>Monthely Payments</h2>
+  </div>
+  <form [formGroup]="calculatorForm" class="calc-body">
+    <div>
+      <label for="payments">Price:</label>
+      <input
+        type="tel"
+        id="payments"
+        [value]="priceVal"
+        (change)="calculatePrice()"
+        formControlName="price"
+        [ngClass]="price?.invalid && price?.touched ? 'invalid' : ''"
+      />
+    </div>
+    <div>
+      <label for="downPayment">Down Payment:</label>
+      <input
+        type="tel"
+        id="downPayment"
+        (change)="calculatePrice()"
+        formControlName="downPayment"
+        [ngClass]="
+          downPayment?.invalid && downPayment?.touched ? 'invalid' : ''
+        "
+        [value]="downPaymentVal"
+      />
+    </div>
+    <div class="display-grid">
+      <div>
+        <label for="interestRate">Interest Rate:</label>
+        <input
+          type="tel"
+          id="interestRate"
+          (change)="calculatePrice()"
+          formControlName="interest"
+          [ngClass]="interest?.invalid && interest?.touched ? 'invalid' : ''"
+          [value]="interestVal"
+        />
+      </div>
+      <div>
+        <label for="loanTerm">Loan Term:</label>
+        <input
+          type="tel"
+          id="loanTerm"
+          (change)="calculatePrice()"
+          formControlName="loanTerm"
+          [ngClass]="loanTerm?.invalid && loanTerm?.touched ? 'invalid' : ''"
+          [value]="loanTermVal"
+        />
+      </div>
+    </div>
+    <div>
+      <label for="monthlyBill">Monthly Bill:</label>
+      <input
+        type="tel"
+        id="monthlyBill"
+        formControlName="monthlyBill"
+        [value]="totalEmi"
+      />
+    </div>
+  </form>
+  <button>Mortgage Calculator</button>
+</div>

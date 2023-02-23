@@ -8,7 +8,7 @@ import { PropertyDetailsComponent } from './pages/property/property-details/prop
 
 const routes: Routes = [
   {
-    path: 'login',
+    path: '',
     component: LoginComponent,
   },
   {

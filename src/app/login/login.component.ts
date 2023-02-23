@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {
   FormGroup,
   FormControl,
   FormBuilder,
   Validators,
 } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Event, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 import { APIServicesService } from '../apiservices.service';
@@ -25,6 +25,7 @@ export class LoginComponent {
 
   loginArr: any;
   loginSuccess: any;
+  @Output() success: EventEmitter<any> = new EventEmitter();
 
   ngOnInit() {
     this.getLoginData();
@@ -58,6 +59,7 @@ export class LoginComponent {
         newestOnTop: true,
         positionClass: 'toast-top-right',
       });
+      this.success.emit(true);
       setTimeout(() => {
         this.route.navigate(['dashboard']);
       }, 2000);

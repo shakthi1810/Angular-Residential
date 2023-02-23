@@ -1,4 +1,11 @@
-<div class="container-wrapper" [ngClass]="collapsed ? 'collapsed' : ''">
+<div *ngIf="!loginSuccess">
+  <app-login (success)="loginValidation($event)"></app-login>
+</div>
+<div
+  class="container-wrapper"
+  [ngClass]="collapsed ? 'collapsed' : ''"
+  *ngIf="loginSuccess"
+>
   <aside class="sidenav">
     <app-side-menu (toggle)="onOpen($event)"></app-side-menu>
   </aside>

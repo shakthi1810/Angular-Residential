@@ -13,10 +13,10 @@
       <li
         *ngFor="let list of filteredArr"
         class="search-list"
-        [attr.data-lat]="list.lat"
-        [attr.data-lng]="list.lng"
+        [attr.data-code]="list.code"
+        [attr.data-state]="list.state"
       >
-        {{ list.city }}
+        {{ list.state }}
       </li>
     </ul>
   </div>

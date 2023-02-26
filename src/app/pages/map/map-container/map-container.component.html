@@ -1,7 +1,7 @@
 <div class="map-wrapper">
   <div class="map-holder">
     <app-leaflet-map
-      [coordinate]="coords"
+      [location]="location"
       (locationList)="loadList($event)"
     ></app-leaflet-map>
     <app-search-component (location)="loadCoord($event)"></app-search-component>

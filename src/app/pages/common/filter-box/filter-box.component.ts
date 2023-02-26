@@ -23,11 +23,17 @@ export class FilterBoxComponent implements OnInit, OnChanges {
   ngOnInit(): void {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.labelStr = this.label.label;
-    this.options = this.label.option;
+    this.labelStr = this.label?.label;
+    this.options = this.label?.option;
   }
 
   onInput(data: any) {
-    this.filterValue.emit(data.target.value);
+    let selectedState = this.options.filter((cur: any) => {
+      return cur.code === data.target.value;
+    });
+    this.filterValue.emit({
+      cd: data.target.value,
+      state: selectedState[0].state,
+    });
   }
 }

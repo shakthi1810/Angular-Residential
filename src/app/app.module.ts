@@ -13,6 +13,10 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { SideMenuComponent } from './pages/common/side-menu/side-menu.component';
+import { MainComponent } from './pages/main/main.component';
+import { EnquiryModule } from './pages/enquiry/enquiry/enquiry.module';
+// import { EnquiryComponent } from './pages/enquiry/enquiry.component';
+// import { EnquiryDetailsComponent } from './pages/enquiry/enquiry-details/enquiry-details.component';
 // import { FilterBoxComponent } from './pages/common/filter-box/filter-box.component';
 // import { PropertyCardComponent } from './pages/common/property-card/property-card.component';
 
@@ -25,6 +29,9 @@ import { SideMenuComponent } from './pages/common/side-menu/side-menu.component'
     LoginComponent,
     DashboardComponent,
     SideMenuComponent,
+    MainComponent,
+    // EnquiryComponent,
+    // EnquiryDetailsComponent,
     // FilterBoxComponent,
     // PropertyCardComponent,
     // PropertyCardComponent,
@@ -40,6 +47,7 @@ import { SideMenuComponent } from './pages/common/side-menu/side-menu.component'
     MapModule,
     PropertyModule,
     CommonModule,
+    EnquiryModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

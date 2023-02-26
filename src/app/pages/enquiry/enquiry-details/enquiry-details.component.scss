@@ -1,0 +1,48 @@
+.enquiry-container {
+  padding: 24px;
+
+  .enq-card {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.125);
+    margin-bottom: 24px;
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    span {
+      &.type {
+        display: inline-block;
+        padding: 2px 8px;
+        color: #fff;
+        background-color: red;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+    }
+
+    .subject {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .date,
+    .email {
+      font-size: 14px;
+      color: #737373;
+      margin-bottom: 24px;
+    }
+
+    .email {
+      margin: 0;
+    }
+
+    .description {
+      margin-bottom: 24px;
+    }
+  }
+}

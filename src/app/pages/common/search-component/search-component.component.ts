@@ -17,6 +17,8 @@ interface list {
   lng: string;
   population: string;
   population_proper: string;
+  state: string;
+  code: string;
 }
 
 @Component({
@@ -31,8 +33,6 @@ export class SearchComponentComponent implements OnInit {
   ) {}
   value: any = 'Search by state';
   filteredArr: list[] = [];
-  latitude: any;
-  longitude: any;
 
   @Output() location: EventEmitter<any> = new EventEmitter();
 
@@ -43,7 +43,7 @@ export class SearchComponentComponent implements OnInit {
   async GenerateData(event: any) {
     (await this.searchCoord.getCoord()).subscribe((res: any) => {
       this.filteredArr = res.filter((cur: any) => {
-        return cur.city.toLowerCase().startsWith(this.value.toLowerCase());
+        return cur.state.toLowerCase().startsWith(this.value.toLowerCase());
       });
     });
   }
@@ -52,16 +52,13 @@ export class SearchComponentComponent implements OnInit {
     let list = this.element.nativeElement.querySelector('#searchResult');
     list?.addEventListener('click', (e: any) => {
       let el = e.target.closest('.search-list');
-      this.latitude = el.dataset.lat;
-      this.longitude = el.dataset.lng;
-
-      console.log(this.latitude, this.longitude);
-
+      // this.latitude = el.dataset.city;
+      // this.longitude = el.dataset.code;
       this.filteredArr = [];
-
+      // console.log('hello');
       this.location.emit({
-        lat: this.latitude,
-        lng: this.longitude,
+        city: el.dataset.state,
+        code: el.dataset.code,
         renderMap: true,
       });
     });

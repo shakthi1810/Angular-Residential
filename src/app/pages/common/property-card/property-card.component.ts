@@ -19,7 +19,7 @@ export class PropertyCardComponent implements OnInit, OnChanges {
   ngOnInit(): void {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.propertyList);
+    console.log(this.propertyList, 'property card');
   }
 
   viewDetails(e: any) {

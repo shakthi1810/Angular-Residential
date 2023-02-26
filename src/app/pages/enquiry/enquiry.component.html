@@ -1,0 +1,51 @@
+<div class="enquiry-container">
+  <div class="overlay" *ngIf="showOverlay"></div>
+  <div class="filter">
+    <app-filter-box
+      [label]="State"
+      (filterValue)="typedVal($event)"
+    ></app-filter-box>
+  </div>
+  <div class="enquiry-wrapper">
+    <div
+      class="enquiry-card"
+      *ngFor="let item of enquiryArr; let i = index"
+      (click)="navigation($event, item.id)"
+    >
+      <div>
+        <span class="read">unread</span>
+      </div>
+      <div>
+        <div class="enquiry-header">
+          <h3>{{ item.data.title }}</h3>
+          <button class="enquiry-option" (click)="openDropdown($event)">
+            <svg class="icon icon-more-vertical">
+              <use xlink:href="#icon-more-vertical"></use>
+              <symbol id="icon-more-vertical" viewBox="0 0 24 24">
+                <path
+                  d="M14 12c0-0.552-0.225-1.053-0.586-1.414s-0.862-0.586-1.414-0.586-1.053 0.225-1.414 0.586-0.586 0.862-0.586 1.414 0.225 1.053 0.586 1.414 0.862 0.586 1.414 0.586 1.053-0.225 1.414-0.586 0.586-0.862 0.586-1.414zM14 5c0-0.552-0.225-1.053-0.586-1.414s-0.862-0.586-1.414-0.586-1.053 0.225-1.414 0.586-0.586 0.862-0.586 1.414 0.225 1.053 0.586 1.414 0.862 0.586 1.414 0.586 1.053-0.225 1.414-0.586 0.586-0.862 0.586-1.414zM14 19c0-0.552-0.225-1.053-0.586-1.414s-0.862-0.586-1.414-0.586-1.053 0.225-1.414 0.586-0.586 0.862-0.586 1.414 0.225 1.053 0.586 1.414 0.862 0.586 1.414 0.586 1.053-0.225 1.414-0.586 0.586-0.862 0.586-1.414z"
+                ></path>
+              </symbol>
+            </svg>
+          </button>
+          <div class="button-option">
+            <ul>
+              <li class="item">
+                <button (click)="deleteEntry(item.id)">Delete</button>
+              </li>
+              <li class="item"><button>Mark as read</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="enquiry-body-wrap">
+          <p class="property-name">{{ item.data.property }}</p>
+          <div>
+            <span>{{ item.data.topic }}</span>
+            <p class="email">{{ item.data.email }}</p>
+          </div>
+          <p class="date">{{ item.data.date | date : "dd MMM yyyy" }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

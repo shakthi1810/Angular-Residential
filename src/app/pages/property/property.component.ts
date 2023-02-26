@@ -1,6 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { APIServicesService } from 'src/app/apiservices.service';
 
+interface stateCd {
+  city: string;
+  code: string;
+}
+
 @Component({
   selector: 'app-property',
   templateUrl: './property.component.html',
@@ -13,64 +18,43 @@ export class PropertyComponent implements OnInit {
 
   propertyDetail: [] = [];
 
-  State: any = {
-    label: 'State',
-    option: '',
+  initialCoord = {
+    city: 'San Jose',
+    cityCd: 'CA',
   };
-  City: any = {
-    label: 'City',
-    option: '',
-  };
-  District: any = {
-    label: 'District',
-    option: '',
+
+  State: any;
+  selectedState: stateCd = {
+    city: '',
+    code: '',
   };
 
   ngOnInit(): void {
+    this.loadState();
     this.getPropertyList();
-
-    this.State.option = [
-      { key: 'New York', value: 'New York' },
-      { key: 'California', value: 'California' },
-      { key: 'Los Angeles', value: 'Los Angeles' },
-      { key: 'Los Vagaes', value: 'Los Vagaes' },
-      { key: 'Landon', value: 'Landon' },
-      { key: 'Israel', value: 'Israel' },
-      { key: 'Denmark', value: 'Denmark' },
-    ];
-
-    this.City.option = [
-      { key: 'Ny', value: 'New york' },
-      { key: 'CA', value: 'California' },
-      { key: 'LA', value: 'Los Angeles' },
-      { key: 'LV', value: 'Los Vagas' },
-    ];
-
-    this.District.option = [
-      { key: 'Ny', value: 'New york' },
-      { key: 'CA', value: 'California' },
-      { key: 'LA', value: 'Los Angeles' },
-      { key: 'LV', value: 'Los Vagas' },
-    ];
   }
 
-  async getPropertyList() {
-    (await this.propertyListCard.getPropertyDetails()).subscribe((cur: any) => {
-      this.cardProperty = cur;
+  async getPropertyList(city: string = 'San Jose', cityCode: string = 'CA') {
+    (await this.propertyListCard.getPropertyDetails(city, cityCode)).subscribe(
+      (cur: any) => {
+        this.cardProperty = cur;
+      }
+    );
+  }
 
-      console.log(cur);
+  async loadState() {
+    (await this.propertyListCard.getCoord()).subscribe((cur) => {
+      this.State = {
+        label: 'State',
+        option: cur,
+      };
     });
   }
 
   typedVal(data: any) {
-    console.log(data);
-  }
+    this.selectedState.city = data.state;
+    this.selectedState.code = data.cd;
 
-  typedValTwo(data: any) {
-    console.log(data);
-  }
-
-  typedValThree(data: any) {
-    console.log(data);
+    this.getPropertyList(this.selectedState.city, this.selectedState.code);
   }
 }

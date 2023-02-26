@@ -1,0 +1,15 @@
+<div class="enquiry-container">
+  <div class="enq-card">
+    <h2>{{ data?.property }}</h2>
+    <span class="type">{{ data?.topic }}</span>
+  </div>
+  <div class="enq-card">
+    <p class="subject">{{ data?.title }}</p>
+    <p class="date">{{ data?.date | date : "dd MMM yyyy" }}</p>
+    <p class="description">{{ data?.comments }}</p>
+    <div>
+      <p class="name">{{ data?.name }}</p>
+      <p class="email">{{ data?.email }}</p>
+    </div>
+  </div>
+</div>

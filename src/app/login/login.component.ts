@@ -61,8 +61,8 @@ export class LoginComponent {
       });
       this.success.emit(true);
       setTimeout(() => {
-        this.route.navigate(['dashboard']);
-      }, 2000);
+        this.route.navigate(['']);
+      }, 300);
     } else {
       console.log('Login Failed');
     }

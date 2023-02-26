@@ -32,11 +32,11 @@ export class APIServicesService {
     return this.http.get('../../assets/JSON/in.json');
   }
 
-  async getPropertyDetails() {
+  async getPropertyDetails(city: string, cityCd: string) {
     // return this.http.get(
     //   'https://realtor-real-estate-data-api.p.rapidapi.com/realtor_data/property/',
     //   {
-    //     params: { city: 'San Jose', state_code: 'CA', offset: '0' },
+    //     params: { city: city, state_code: cityCd, offset: '0' },
     //     headers: {
     //       'X-RapidAPI-Key':
     //         '0f010c7f60msh9b257931edbe078p154deejsnc76221d6490f',

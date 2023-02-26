@@ -15,7 +15,11 @@
         </div>
       </div>
       <div class="property-detail-card">
-        <img [src]="propertyDetailArr.photos[0].href" alt="" />
+        <img
+          class="property-img"
+          [src]="propertyDetailArr.photos[0].href"
+          alt=""
+        />
       </div>
       <div class="property-detail-card">
         <h3>Details</h3>
@@ -100,6 +104,45 @@
           </address>
           <app-leaflet-map class="map" [coordinate]="coords"></app-leaflet-map>
         </div>
+      </div>
+      <div class="property-detail-card">
+        <h3>Enquiry</h3>
+        <form [formGroup]="enquiryForm">
+          <div class="form">
+            <div>
+              <label for="">Name:</label>
+              <input type="text" formControlName="name" />
+            </div>
+            <div>
+              <label for="">Email:</label>
+              <input type="email" formControlName="email" />
+            </div>
+            <div>
+              <label for="">Title:</label>
+              <input type="text" formControlName="title" />
+            </div>
+            <div>
+              <label for="">Topic:</label>
+              <select name="" id="" formControlName="topic">
+                <option value="Paymennt">Paymennt</option>
+                <option value="Sales">Sales</option>
+                <option value="Information">Information</option>
+                <option value="Schedule Visit">Schedule Visit</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="">Comments:</label>
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="6"
+              formControlName="comments"
+            ></textarea>
+          </div>
+          <button class="form-submit" (click)="enquirySubmit()">Submit</button>
+        </form>
       </div>
     </div>
     <div class="calculator-asaid">

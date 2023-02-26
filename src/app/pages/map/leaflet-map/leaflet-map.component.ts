@@ -20,6 +20,7 @@ export class LeafletMapComponent implements AfterViewInit, OnChanges, OnInit {
   constructor(private propertyList: APIServicesService) {}
 
   @Input() coordinate: any;
+  @Input() location: any;
   @Output() locationList: EventEmitter<any> = new EventEmitter();
 
   private map: any;
@@ -27,11 +28,16 @@ export class LeafletMapComponent implements AfterViewInit, OnChanges, OnInit {
   long: any;
   isRender: boolean = false;
   greenIcon: any;
+  renderMapCount: number = 0;
   propertyListArr: any;
+  initialCoord = {
+    city: 'San Jose',
+    cityCd: 'CA',
+  };
 
   ngOnInit(): void {
     this.getPropertyList();
-
+    // this.initMap();
     this.greenIcon = L.icon({
       iconUrl: '../../../../assets/icon/location.svg',
       iconSize: [38, 95], // size of the icon
@@ -42,34 +48,46 @@ export class LeafletMapComponent implements AfterViewInit, OnChanges, OnInit {
     });
   }
 
-  async getPropertyList() {
-    (await this.propertyList.getPropertyDetails()).subscribe((el: any) => {
-      console.log(el);
-      this.propertyListArr = el;
+  async getPropertyList(
+    city: string = this.initialCoord.city,
+    cityCode: string = this.initialCoord.cityCd
+  ) {
+    (await this.propertyList.getPropertyDetails(city, cityCode)).subscribe(
+      (el: any) => {
+        console.log(el);
+        this.propertyListArr = el;
+        this.lat = el[0].location.address.coordinate.lat;
+        this.long = el[0].location.address.coordinate.lon;
 
-      if (!this.coordinate) {
-        this.propertyListArr.forEach((el: any) => {
-          this.loadMarker(el);
-        });
+        if (this.renderMapCount === 0) {
+          this.initMap();
+          this.renderMapCount++;
+          console.log('map', this.renderMapCount);
+        }
 
-        this.locationList.emit(this.propertyListArr);
-      } else {
-        this.loadSingleMarker();
+        console.log(this.coordinate);
+        if (!this.coordinate) {
+          this.propertyListArr.forEach((el: any) => {
+            this.loadMarker(el);
+          });
+          this.locationList.emit(this.propertyListArr);
+        } else {
+          this.loadSingleMarker();
+        }
       }
-    });
+    );
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.isRender = this.coordinate?.isRender;
-    if (this.isRender) {
+    // this.isRender = this.coordinate?.renderMap;
+    if (this.location) {
+      this.getPropertyList(this.location.city, this.location.code);
       // this.lat = this.coordinate.lat;
       // this.long = this.coordinate.lng;
       // this.map.flyTo(new L.LatLng(this.lat, this.long));
       // const marker = new L.Marker([this.lat, this.long], {
       //   icon: this.greenIcon,
       // }).addTo(this.map);
-
-      this.getPropertyList();
     }
   }
 
@@ -81,11 +99,10 @@ export class LeafletMapComponent implements AfterViewInit, OnChanges, OnInit {
     //     this.initMap();
     //   });
     // }
-
-    this.lat = 37.717001;
-    this.long = -122.464153;
-    this.initMap();
-    // console.log(this.propertyListArr);
+    // this.lat = 37.717001;
+    // this.long = -122.464153;
+    // this.initMap();
+    //console.log(this.propertyListArr);
   }
 
   private initMap(): void {
@@ -135,7 +152,7 @@ export class LeafletMapComponent implements AfterViewInit, OnChanges, OnInit {
   }
 
   loadSingleMarker() {
-    const marker = new L.Marker([this.coordinate.lat, this.coordinate.lon], {
+    const marker = new L.Marker([this.coordinate.lat, this.coordinate.lng], {
       icon: this.greenIcon,
     })
       .addTo(this.map)

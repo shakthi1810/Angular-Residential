@@ -8,14 +8,13 @@ import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 export class MapContainerComponent implements OnChanges, OnInit {
   ngOnInit(): void {}
   ngOnChanges(changes: SimpleChanges): void {}
-  coords: any;
+  location: any;
   propertyList: any;
 
   loadCoord(e: any) {
-    this.coords = {
-      lat: e.lat,
-      lng: e.lng,
-      isRender: true,
+    this.location = {
+      city: e.city,
+      code: e.code,
     };
   }
 

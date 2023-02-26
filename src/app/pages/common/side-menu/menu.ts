@@ -17,7 +17,7 @@ let menus = [
   {
     name: 'Enquiries',
     icon: 'lnr lnr-phone-handset',
-    routerLink: '/enquirey',
+    routerLink: '/enquiry',
   },
   {
     name: 'Setting',

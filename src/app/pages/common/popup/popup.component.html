@@ -1,0 +1,12 @@
+<div class="popup-overlay" *ngIf="popupShow">
+  <div class="popup-card">
+    <h2>{{ popData.title }}</h2>
+    <p>
+      {{ popData.description }}
+    </p>
+    <div>
+      <button (click)="proceed()">Proceed</button>
+      <button (click)="cancelPopup()" class="cancel">Cancel</button>
+    </div>
+  </div>
+</div>

@@ -5,9 +5,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModuleModule } from '../common/common-module/common-module.module';
 import { PropertyDetailsComponent } from './property-details/property-details.component';
 import { MapModule } from '../map/map.module';
+import { EmailValidationDirective } from 'src/app/directives/email-validation.directive';
 
 @NgModule({
-  declarations: [PropertyComponent, PropertyDetailsComponent],
+  declarations: [
+    PropertyComponent,
+    PropertyDetailsComponent,
+    EmailValidationDirective,
+  ],
   imports: [
     CommonModule,
     FormsModule,

@@ -4,9 +4,9 @@
       <div class="property-detail-card">
         <div class="display-flex">
           <div>
-            <h2>{{ propertyDetailArr.branding[0].name }}</h2>
+            <h2>{{ propertyDetailArr?.branding[0].name }}</h2>
             <span class="property-label">{{
-              propertyDetailArr.branding[0].type
+              propertyDetailArr?.branding[0].type
             }}</span>
           </div>
           <button>
@@ -17,7 +17,7 @@
       <div class="property-detail-card">
         <img
           class="property-img"
-          [src]="propertyDetailArr.photos[0].href"
+          [src]="propertyDetailArr?.photos[0].href"
           alt=""
         />
       </div>
@@ -26,32 +26,34 @@
         <div class="address-grid">
           <div>
             <i class="fa fa-menu"></i>
-            <p><b>Beds:</b>{{ propertyDetailArr.property_description.beds }}</p>
-          </div>
-          <div>
-            <i class="fa fa-menu"></i>
             <p>
-              <b>Baths:</b>{{ propertyDetailArr.property_description.baths }}
+              <b>Beds:</b>{{ propertyDetailArr?.property_description.beds }}
             </p>
           </div>
           <div>
             <i class="fa fa-menu"></i>
             <p>
-              <b>Garage:</b>{{ propertyDetailArr.property_description.garage }}
+              <b>Baths:</b>{{ propertyDetailArr?.property_description.baths }}
+            </p>
+          </div>
+          <div>
+            <i class="fa fa-menu"></i>
+            <p>
+              <b>Garage:</b>{{ propertyDetailArr?.property_description.garage }}
             </p>
           </div>
           <div>
             <i class="fa fa-menu"></i>
             <p>
               <b>Square feet:</b
-              >{{ propertyDetailArr.property_description.sqft }}
+              >{{ propertyDetailArr?.property_description.sqft }}
             </p>
           </div>
           <div>
             <i class="fa fa-menu"></i>
             <p>
               <b>Lots square feet:</b
-              >{{ propertyDetailArr.property_description.lot_sqft }}
+              >{{ propertyDetailArr?.property_description.lot_sqft }}
             </p>
           </div>
           <div>
@@ -59,7 +61,7 @@
             <p>
               <b>Sold price:</b
               >{{
-                propertyDetailArr.property_description.sold_price
+                propertyDetailArr?.property_description.sold_price
                   | currency : "USD" : "symbol" : "4.2-2"
               }}
             </p>
@@ -68,7 +70,7 @@
             <i class="fa fa-menu"></i>
             <p>
               <b>Sold Date:</b
-              >{{ propertyDetailArr.property_description.sold_date }}
+              >{{ propertyDetailArr?.property_description.sold_date }}
             </p>
           </div>
         </div>
@@ -79,26 +81,26 @@
           <address>
             <span
               ><b>Building Name:</b
-              >{{ propertyDetailArr.branding[0].name }},</span
+              >{{ propertyDetailArr?.branding[0].name }},</span
             >
             <span
               ><b>Street:</b
-              >{{ propertyDetailArr.location.address.line }},</span
+              >{{ propertyDetailArr?.location.address.line }},</span
             >
             <span
-              ><b>City:</b>{{ propertyDetailArr.location.address.city }},</span
+              ><b>City:</b>{{ propertyDetailArr?.location.address.city }},</span
             >
             <span
-              ><b>State:</b>{{ propertyDetailArr.location.address.state }} -
-              {{ propertyDetailArr.location.address.state_code }},</span
+              ><b>State:</b>{{ propertyDetailArr?.location.address.state }} -
+              {{ propertyDetailArr?.location.address.state_code }},</span
             >
             <span
               ><b>Postal code:</b
-              >{{ propertyDetailArr.location.address.postal_code }}.</span
+              >{{ propertyDetailArr?.location.address.postal_code }}.</span
             >
             <a
               class="street-view-btn"
-              [href]="propertyDetailArr.location.street_view_url"
+              [href]="propertyDetailArr?.location.street_view_url"
               >Street View</a
             >
           </address>
@@ -115,7 +117,7 @@
             </div>
             <div>
               <label for="">Email:</label>
-              <input type="email" formControlName="email" />
+              <input type="email" EmailValidation formControlName="email" />
             </div>
             <div>
               <label for="">Title:</label>

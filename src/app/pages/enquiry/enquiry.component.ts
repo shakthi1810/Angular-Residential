@@ -6,7 +6,8 @@ import {
   ElementRef,
 } from '@angular/core';
 import { EnquiryFormService } from 'src/app/services/enquiry-form.service';
-import { Event, Router } from '@angular/router';
+import { Data, Event, Router } from '@angular/router';
+import { ModalService } from 'src/app/services/modal.service';
 
 interface enquiryData {
   id: string;
@@ -21,6 +22,11 @@ interface enquiryData {
   };
 }
 
+interface popupData {
+  title: string;
+  description: string;
+}
+
 @Component({
   selector: 'app-enquiry',
   templateUrl: './enquiry.component.html',
@@ -30,13 +36,18 @@ export class EnquiryComponent implements OnInit, OnChanges {
   constructor(
     private enquires: EnquiryFormService,
     private Routes: Router,
-    private element: ElementRef
+    private element: ElementRef,
+    private modal: ModalService
   ) {}
 
   initialArr: enquiryData[] = [];
   enquiryArr: enquiryData[] = [];
   State = {};
   showOverlay: boolean = false;
+  popupDetail: any;
+  popupCancel: boolean = false;
+  showPopup: boolean = false;
+  deleteId: string = '';
 
   ngOnInit(): void {
     this.getEnquiry();
@@ -60,6 +71,11 @@ export class EnquiryComponent implements OnInit, OnChanges {
           code: 'information',
         },
       ],
+    };
+    this.popupDetail = {
+      title: 'Warning',
+      description:
+        'Are you sure you want to delete the Enquiry Form submission to delete',
     };
   }
 
@@ -92,8 +108,20 @@ export class EnquiryComponent implements OnInit, OnChanges {
   }
 
   deleteEntry(id: string) {
-    console.log('delete worked');
-    // this.enquires.deleteEntries(id);
+    this.showPopup = true;
+    this.deleteId = id;
+  }
+
+  popupSuccess(e: boolean) {
+    this.showPopup = false;
+    if (e) {
+      this.enquires.deleteEntries(this.deleteId);
+      // this.element.nativeElement.querySelector(`.${this.deleteId}`).remove();
+    }
+  }
+
+  popupCancell(e: boolean) {
+    this.showPopup = e;
   }
 
   @HostListener('click') clearPopup() {

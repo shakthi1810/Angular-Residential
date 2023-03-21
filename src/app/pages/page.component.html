@@ -1,0 +1,8 @@
+<div class="container-wrapper" [ngClass]="collapsed ? 'collapsed' : ''">
+  <aside class="sidenav">
+    <app-side-menu (toggle)="onOpen($event)"></app-side-menu>
+  </aside>
+  <main class="main">
+    <router-outlet></router-outlet>
+  </main>
+</div>

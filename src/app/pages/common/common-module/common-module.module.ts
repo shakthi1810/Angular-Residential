@@ -5,6 +5,7 @@ import { SearchComponentComponent } from '../search-component/search-component.c
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterBoxComponent } from '../filter-box/filter-box.component';
 import { CalculatorComponent } from '../calculator/calculator.component';
+import { PopupComponent } from '../popup/popup.component';
 // import { SideMenuComponent } from '../side-menu/side-menu.component';
 
 @NgModule({
@@ -14,6 +15,7 @@ import { CalculatorComponent } from '../calculator/calculator.component';
     FilterBoxComponent,
     CalculatorComponent,
     // SideMenuComponent,
+    PopupComponent,
   ],
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
 
@@ -22,6 +24,7 @@ import { CalculatorComponent } from '../calculator/calculator.component';
     SearchComponentComponent,
     FilterBoxComponent,
     CalculatorComponent,
+    PopupComponent,
   ],
 })
 export class CommonModuleModule {}

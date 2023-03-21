@@ -2,31 +2,37 @@
   {
     "username": "shakthi",
     "email": "shakthi@gmail.com",
-    "password": "123456"
+    "password": "123456",
+    "role": "admin"
   },
   {
     "username": "aakash",
     "email": "aakash@gmail.com",
-    "password": "321654"
+    "password": "321654",
+    "role": "admin"
   },
   {
     "username": "vicky",
     "email": "vicky@gmail.com",
-    "password": "251205"
+    "password": "251205",
+    "role": "subscriber"
   },
   {
     "username": "maruthi",
     "email": "maruthi@gmail.com",
-    "password": "151003"
+    "password": "151003",
+    "role": "subscriber"
   },
   {
     "username": "shakthi_sk",
     "email": "shakthi_sk@gmail.com",
-    "password": "181019"
+    "password": "181019",
+    "role": "tenant"
   },
   {
     "username": "arun",
     "email": "arun@gmail.com",
-    "password": "151019"
+    "password": "151019",
+    "role": "tenant"
   }
 ]

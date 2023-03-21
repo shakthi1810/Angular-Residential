@@ -23,7 +23,7 @@ export class CalculatorComponent implements OnChanges, OnInit {
   totalEmi: Number | undefined;
 
   ngOnChanges(): void {
-    this.priceVal = this.calcValue.price;
+    this.priceVal = this.calcValue?.price;
   }
 
   ngOnInit(): void {

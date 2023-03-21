@@ -1,6 +1,8 @@
 import { Component, OnChanges, OnInit } from '@angular/core';
 import { APIServicesService } from '../../../apiservices.service';
 import { EnquiryFormService } from '../../../services/enquiry-form.service';
+import { ToastrService } from 'ngx-toastr';
+
 import {
   FormControl,
   FormBuilder,
@@ -17,7 +19,8 @@ export class PropertyDetailsComponent implements OnInit {
   constructor(
     private propertyDetail: APIServicesService,
     private fb: FormBuilder,
-    private enquirySubmission: EnquiryFormService
+    private enquirySubmission: EnquiryFormService,
+    private toster: ToastrService
   ) {}
 
   propertyId = window.location.search.split('=')[1];
@@ -59,7 +62,7 @@ export class PropertyDetailsComponent implements OnInit {
         };
 
         this.calcData = {
-          price: this.propertyDetailArr.list_price,
+          price: this.propertyDetailArr?.list_price,
         };
 
         console.log(this.propertyDetailArr);
@@ -68,10 +71,19 @@ export class PropertyDetailsComponent implements OnInit {
   }
 
   enquirySubmit() {
-    console.log(this.enquiryForm.value);
-    let data = this.enquiryForm.value;
-    data.property = this.propertyDetailArr.branding[0].name;
-    data.date = new Date().toISOString();
-    this.enquirySubmission.postEnquiryData(data);
+    if (this.enquiryForm.valid) {
+      // console.log(this.enquiryForm.value);
+      let data = this.enquiryForm.value;
+      data.property = this.propertyDetailArr.branding[0].name;
+      data.date = new Date().toISOString();
+      this.enquirySubmission.postEnquiryData(data);
+      this.toster.success('For submitted successfully', '', {
+        timeOut: 2000,
+        toastClass: 'toast',
+        newestOnTop: true,
+        positionClass: 'toast-top-right',
+      });
+      this.enquiryForm.reset();
+    }
   }
 }

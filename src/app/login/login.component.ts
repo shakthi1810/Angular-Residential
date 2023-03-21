@@ -44,15 +44,19 @@ export class LoginComponent {
   });
 
   onSubmit() {
+    let role: string = '';
     if (this.loginForm.valid) {
       const { firstName, password } = this.loginForm.value;
       this.loginSuccess = this.loginArr.some((cur: any) => {
-        return cur.username === firstName && cur.password === password;
+        if (cur.username === firstName && cur.password === password) {
+          role = cur.role;
+          return cur.username === firstName && cur.password === password;
+        }
+        return;
       }, this);
     }
 
     if (this.loginSuccess) {
-      console.log('Login Success');
       this.toastr.success('Authorization Successfull', '', {
         timeOut: 2000,
         toastClass: 'toast',
@@ -63,8 +67,15 @@ export class LoginComponent {
       setTimeout(() => {
         this.route.navigate(['']);
       }, 300);
+      console.log(this.loginSuccess.role, this.loginSuccess);
+      sessionStorage.setItem('role', role);
     } else {
-      console.log('Login Failed');
+      this.toastr.error('Authorization Failed', '', {
+        timeOut: 2000,
+        toastClass: 'toast',
+        newestOnTop: true,
+        positionClass: 'toast-top-right',
+      });
     }
   }
 

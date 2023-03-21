@@ -2,7 +2,7 @@ let menus = [
   {
     name: 'Dashboard',
     icon: 'lnr lnr-chart-bars',
-    routerLink: '/dashboard',
+    routerLink: '',
   },
   {
     name: 'Property',
@@ -18,6 +18,11 @@ let menus = [
     name: 'Enquiries',
     icon: 'lnr lnr-phone-handset',
     routerLink: '/enquiry',
+  },
+  {
+    name: 'Calculator',
+    icon: 'lnr lnr-pie-chart',
+    routerLink: '/calculator',
   },
   {
     name: 'Setting',

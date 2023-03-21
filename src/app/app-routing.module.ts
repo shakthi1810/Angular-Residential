@@ -8,6 +8,9 @@ import { PropertyDetailsComponent } from './pages/property/property-details/prop
 import { MainComponent } from './pages/main/main.component';
 import { EnquiryComponent } from './pages/enquiry/enquiry.component';
 import { EnquiryDetailsComponent } from './pages/enquiry/enquiry-details/enquiry-details.component';
+import { UserRestrictGuard } from './guards/user-restrict.guard';
+import { LoginRestrictGuard } from './guards/login-restrict.guard';
+import { PageComponent } from './pages/page.component';
 
 const routes: Routes = [
   {
@@ -16,27 +19,37 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: DashboardComponent,
-  },
-  {
-    path: 'map',
-    component: MapContainerComponent,
-  },
-  {
-    path: 'property',
-    component: PropertyComponent,
-  },
-  {
-    path: 'property-details',
-    component: PropertyDetailsComponent,
-  },
-  {
-    path: 'enquiry',
-    component: EnquiryComponent,
-  },
-  {
-    path: 'enquiry-details',
-    component: EnquiryDetailsComponent,
+    component: PageComponent,
+    children: [
+      {
+        path: '',
+        component: DashboardComponent,
+        canActivate: [LoginRestrictGuard],
+      },
+      {
+        path: 'map',
+        component: MapContainerComponent,
+        canActivate: [LoginRestrictGuard],
+      },
+      {
+        path: 'property',
+        component: PropertyComponent,
+        canActivate: [LoginRestrictGuard],
+      },
+      {
+        path: 'property-details',
+        component: PropertyDetailsComponent,
+      },
+      {
+        path: 'enquiry',
+        component: EnquiryComponent,
+        canActivate: [UserRestrictGuard, LoginRestrictGuard],
+      },
+      {
+        path: 'enquiry-details',
+        component: EnquiryDetailsComponent,
+      },
+    ],
   },
 ];
 

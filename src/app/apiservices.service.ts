@@ -33,17 +33,17 @@ export class APIServicesService {
   }
 
   async getPropertyDetails(city: string, cityCd: string) {
-    // return this.http.get(
-    //   'https://realtor-real-estate-data-api.p.rapidapi.com/realtor_data/property/',
-    //   {
-    //     params: { city: city, state_code: cityCd, offset: '0' },
-    //     headers: {
-    //       'X-RapidAPI-Key':
-    //         '0f010c7f60msh9b257931edbe078p154deejsnc76221d6490f',
-    //       'X-RapidAPI-Host': 'realtor-real-estate-data-api.p.rapidapi.com',
-    //     },
-    //   }
-    // );
-    return this.http.get('../../assets/JSON/list.json');
+    return this.http.get(
+      'https://realtor-data-api-for-real-estate.p.rapidapi.com/realtor_data/property/',
+      {
+        params: { city: city, state_code: cityCd, offset: '0' },
+        // headers: {
+        //   'X-RapidAPI-Key':
+        //     '0f010c7f60msh9b257931edbe078p154deejsnc76221d6490f',
+        //   'X-RapidAPI-Host': 'realtor-real-estate-data-api.p.rapidapi.com',
+        // },
+      }
+    );
+    //return this.http.get('../../assets/JSON/list.json');
   }
 }

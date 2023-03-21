@@ -49,3 +49,9 @@
     </div>
   </div>
 </div>
+<app-popup
+  [popData]="popupDetail"
+  [popupShow]="showPopup"
+  (continue)="popupSuccess($event)"
+  (cancel)="popupCancell($event)"
+></app-popup>

@@ -1,0 +1,33 @@
+.container-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+
+  .sidenav {
+    width: 15rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    transition: ease 0.5s;
+    background-color: #3d405b;
+    overflow-x: hidden;
+  }
+
+  .main {
+    width: calc(100% - 15rem);
+    margin: 0 0 0 auto;
+    transition: ease 0.5s;
+    position: relative;
+  }
+
+  &.collapsed {
+    .sidenav {
+      width: 4rem;
+    }
+    .main {
+      width: calc(100% - 4rem);
+    }
+  }
+}

@@ -10,18 +10,5 @@ export class AppComponent implements OnInit {
   collapsed: boolean = false;
   loginSuccess: boolean = false;
 
-  ngOnInit(): void {
-    let loginValid = sessionStorage.getItem('loginValid');
-    this.loginSuccess = loginValid == 'true' ? true : false;
-  }
-
-  onOpen(data: any) {
-    console.log(data);
-    this.collapsed = data;
-  }
-
-  loginValidation(e: any) {
-    this.loginSuccess = e;
-    sessionStorage.setItem('loginValid', 'true');
-  }
+  ngOnInit(): void {}
 }
